@@ -1,10 +1,5 @@
-import requests
-import nltk
-from lxml import html
-import itertools
 from nltk.classify import NaiveBayesClassifier
 from nltk.tokenize import word_tokenize
-import sys
 import time
 import fetching_ as fetch_
 import fetching__ as fetch__
@@ -45,7 +40,7 @@ def sentiment_analysis():
 	pb.progress(80.0, 100)
 	ng.hack(neg_rev)
 	pb.progress(100.0, 100, True)
-	time.sleep(5)
+	time.sleep(1)
 
 	print("\n\nPhase 2...\n")
 
@@ -73,7 +68,7 @@ def sentiment_analysis():
 
 	# print(nltk.classify.util.accuracy(classifier, test) * 100)
 
-	time.sleep(5)
+	time.sleep(1)
 	print("\n\nPhase 3...\n")
 	pb.progress(0.0, 100)
 	time.sleep(1)
@@ -115,7 +110,6 @@ def sentiment_analysis():
 		else:
 			pos_c += 1
 
-	time.sleep(1)
 	time.sleep(1)
 	pb.progress(100.0, 100.0, True)
 
